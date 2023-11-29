@@ -1,5 +1,3 @@
-# poc-sequelize
-
 # 🔥poc-sequelize🔥
 
 This is a simple project that validates another way of putting sequelize in a project that mainly uses javascript.🤔
