@@ -1,9 +1,14 @@
-const  UserModel  = require("../models/userModel");
+const UserModel = require("../models/userModel");
 
-async function sequelizeInsert(req, res) {
-  const teste = await UserModel.findAll();
-  console.log(teste);
-  res.status(200).json(teste)
+async function sequelizeGetAll(req, res) {
+  const result = await UserModel.findAll();
+  res.status(200).json(result);
 }
 
-module.exports = { sequelizeInsert }
+async function sequelizeGetById(req, res) {
+  const userId = req.params.id;
+  const result = await UserModel.findByPk(userId);
+  res.status(200).json(result);
+}
+
+module.exports = { sequelizeGetAll, sequelizeGetById };
